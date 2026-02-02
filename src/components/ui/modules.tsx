@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Modules() {
     // Array of 9 images (module-01.png to module-09.png)
     const modules = Array.from({ length: 9 }, (_, i) => `module-${String(i + 1).padStart(2, "0")}.png`);
@@ -23,10 +25,15 @@ export default function Modules() {
                                 key={index}
                                 className="rounded-2xl overflow-hidden w-[280px] md:w-[320px] h-[400px] flex-shrink-0 border border-white/10 hover:border-[#dc2626] transition-all duration-300 shadow-lg group relative"
                             >
-                                <img
+                                <Image
                                     src={`/modules/${img}`}
                                     alt={`Módulo ${index + 1}`}
+                                    width={320}
+                                    height={400}
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    loading={index >= 9 ? "lazy" : "eager"}
+                                    quality={85}
+                                    sizes="(max-width: 768px) 280px, 320px"
                                 />
                             </div>
                         ))}

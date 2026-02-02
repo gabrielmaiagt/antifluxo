@@ -1,8 +1,36 @@
+"use client";
+
+import { useEffect, useRef } from 'react';
 import ShimmerButton from "@/components/ui/shimmer-button";
+import { trackEvent, getSessionId } from '@/lib/analytics';
+import { serverTimestamp } from 'firebase/firestore';
 
 export default function Pricing() {
+    const pricingRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        // Track when pricing card becomes visible
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const sessionId = getSessionId();
+                        trackEvent('pricing_viewed', { sessionId });
+                        observer.disconnect();
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        if (pricingRef.current) {
+            observer.observe(pricingRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
     return (
-        <section id="pricing" className="pt-4 pb-8 bg-black text-white relative z-10 font-sans flex items-center justify-center">
+        <section id="pricing" className="py-8 bg-black text-white relative z-10 font-sans flex items-center justify-center" ref={pricingRef}>
             <div className="container mx-auto px-4 flex justify-center">
 
                 {/* Card Container - Matching the reference format */}
@@ -58,7 +86,14 @@ export default function Pricing() {
                         </div>
 
                         {/* 5. BUTTON */}
-                        <a href="https://pay.cakto.com.br/33kpzzg" className="w-full">
+                        <a
+                            href="https://pay.cakto.com.br/33kpzzg"
+                            className="w-full"
+                            onClick={() => {
+                                const sessionId = getSessionId();
+                                trackEvent('checkout_clicked', { sessionId, amount: 29.90 });
+                            }}
+                        >
                             <ShimmerButton
                                 background="#dc2626"
                                 shimmerColor="#ff9999"

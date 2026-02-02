@@ -1,4 +1,7 @@
+"use client";
+
 import ShimmerButton from "@/components/ui/shimmer-button";
+import { trackEvent, getSessionId } from '@/lib/analytics';
 
 export default function FinalCTA() {
     return (
@@ -24,7 +27,13 @@ export default function FinalCTA() {
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="#pricing">
+                        <a
+                            href="#pricing"
+                            onClick={() => {
+                                const sessionId = getSessionId();
+                                trackEvent('cta_final_main_clicked', { sessionId, location: 'final_cta' });
+                            }}
+                        >
                             <ShimmerButton className="shadow-2xl">
                                 <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg uppercase">
                                     GARANTIR MINHA VAGA AGORA

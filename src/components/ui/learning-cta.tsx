@@ -1,3 +1,7 @@
+"use client";
+
+import { trackEvent, getSessionId } from '@/lib/analytics';
+
 export default function LearningCTA() {
     return (
         <section className="py-16 bg-black text-white relative z-10 font-sans flex items-center justify-center">
@@ -39,6 +43,10 @@ export default function LearningCTA() {
                         <a
                             href="#pricing"
                             className="relative inline-block w-full bg-white text-black font-bold text-sm uppercase tracking-wider py-4 px-8 rounded-full hover:bg-[#dc2626] hover:text-white transition-all duration-300 hover:scale-105 shadow-[0_4px_20px_rgba(255,255,255,0.2)] hover:shadow-[0_8px_30px_rgba(220,38,38,0.6)] overflow-hidden group/btn"
+                            onClick={() => {
+                                const sessionId = getSessionId();
+                                trackEvent('cta_learning_clicked', { sessionId, location: 'learning_cta' });
+                            }}
                         >
                             <span className="relative z-10">COMEÇAR AGORA</span>
                             {/* Button shine effect */}

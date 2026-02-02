@@ -1,17 +1,20 @@
+import dynamic from 'next/dynamic';
 import UrgencyBanner from "@/components/ui/urgency-banner";
 import InfiniteHero from "@/components/ui/infinite-hero";
-import Benefits from "@/components/ui/benefits";
 import LevelerCard from "@/components/ui/leveler-card";
-import Testimonials from "@/components/ui/testimonials";
-import LearningCTA from "@/components/ui/learning-cta";
-import Modules from "@/components/ui/modules";
-import Investment from "@/components/ui/investment";
-import Pricing from "@/components/ui/pricing";
-import Guarantee from "@/components/ui/guarantee";
-import FAQ from "@/components/ui/faq";
-import FinalCTA from "@/components/ui/final-cta";
-import Footer from "@/components/ui/footer";
 import FadeIn from "@/components/ui/fade-in";
+
+// Lazy load below-the-fold components
+const Benefits = dynamic(() => import("@/components/ui/benefits"));
+const Testimonials = dynamic(() => import("@/components/ui/testimonials"));
+const LearningCTA = dynamic(() => import("@/components/ui/learning-cta"));
+const Modules = dynamic(() => import("@/components/ui/modules"));
+const Investment = dynamic(() => import("@/components/ui/investment"));
+const Pricing = dynamic(() => import("@/components/ui/pricing"));
+const Guarantee = dynamic(() => import("@/components/ui/guarantee"));
+const FAQ = dynamic(() => import("@/components/ui/faq"));
+const FinalCTA = dynamic(() => import("@/components/ui/final-cta"));
+const Footer = dynamic(() => import("@/components/ui/footer"));
 
 export default function Home() {
   return (

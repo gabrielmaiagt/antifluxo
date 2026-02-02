@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
+import FirebaseAnalytics from "@/components/analytics/FirebaseAnalytics";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const oswald = Oswald({
   variable: "--font-oswald",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -27,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${oswald.variable} antialiased font-sans`}
       >
+        <FirebaseAnalytics />
         {children}
       </body>
     </html>
