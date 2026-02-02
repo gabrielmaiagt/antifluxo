@@ -189,21 +189,21 @@ export default function InfiniteHero() {
                         className="mx-auto mb-8 text-4xl sm:text-6xl md:text-7xl font-black leading-[0.9] tracking-tighter text-white font-display uppercase drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                     >
                         <span className="whitespace-nowrap block">COMUNIDADE PRIVADA</span>
-                        <span className="whitespace-nowrap block">PARA PLAYERS DO</span>
-                        <span className="whitespace-nowrap block text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]">MERCADO DIGITAL.</span>
+                        <span className="whitespace-nowrap block">PARA PLAYERS DE</span>
+                        <span className="whitespace-nowrap block text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]">DIRECT RESPONSE</span>
                     </h1>
 
                     <p
                         ref={subtitleRef}
                         className="mx-auto mt-6 mb-12 max-w-lg text-base md:text-lg leading-relaxed text-white/90 px-4 drop-shadow-lg font-medium font-sans"
                     >
-                        A <strong className="text-white font-bold">ANTI FLUXO</strong> reúne players de múltiplos{" "}
-                        7 dígitos mesclado a players <span className="text-white underline underline-offset-4 decoration-[#ef4444]">iniciantes</span> no{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">mercado digital</span>. Com um único objetivo em comum: te{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">ajudar</span> a{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">iniciar</span> e{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">faturar</span> com consistência no{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">mercado digital</span>.
+                        A <strong className="text-white font-bold">ANTI FLUXO</strong> reúne players que fazem{" "}
+                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">múltiplos 6 dígitos por dia</span> e{" "}
+                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">players iniciantes</span>. Um único objetivo em comum: te{" "}
+                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">ajudar a começar</span> e{" "}
+                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">faturar com consistência</span> com{" "}
+                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">tráfego direto</span> e{" "}
+                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">X1 no WhatsApp</span>.
                     </p>
 
                     <div
