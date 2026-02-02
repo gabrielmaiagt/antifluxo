@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Testimonials() {
     const files = [
         "gabrielmaiagt_1759517591_highlight18082725070951994.mp4",
@@ -38,17 +40,24 @@ export default function Testimonials() {
                                 className="bg-black border border-[#2a2a2a] rounded-2xl overflow-hidden w-[280px] h-[500px] flex-shrink-0 hover:border-[#dc2626] transition-all duration-300 shadow-lg group relative"
                             >
                                 {file.endsWith(".jpg") ? (
-                                    <img
+                                    <Image
                                         src={`/testimonials/${file}`}
                                         alt="Depoimento Anti Fluxo"
+                                        width={280}
+                                        height={500}
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
+                                        quality={85}
                                     />
                                 ) : (
                                     <video
                                         src={`/testimonials/${file}`}
                                         controls
-                                        className="w-full h-full object-cover"
+                                        preload="metadata"
                                         playsInline
+                                        muted
+                                        className="w-full h-full object-cover"
+                                        poster={`/testimonials/${file}#t=0.1`}
                                     />
                                 )}
                             </div>
