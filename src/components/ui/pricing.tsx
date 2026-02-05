@@ -87,7 +87,7 @@ export default function Pricing() {
 
                         {/* 5. BUTTON */}
                         <a
-                            href="https://pay.cakto.com.br/4aejjve_587694"
+                            href="https://pay.cakto.com.br/33kpzzg"
                             className="w-full"
                             onClick={() => {
                                 const sessionId = getSessionId();
