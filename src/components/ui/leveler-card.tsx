@@ -23,26 +23,53 @@ export default function LevelerCard() {
 
                         {/* Content with top margin for icon */}
                         <div className="relative mt-12">
-                            <h2 className="text-center text-2xl md:text-4xl font-black mb-8 uppercase tracking-tight font-display text-white">
+                            <h2 className="text-center text-2xl md:text-4xl font-black mb-3 uppercase tracking-tight font-display text-white">
                                 O melhor nivelador do mercado
                             </h2>
+                            <p className="text-center text-sm md:text-base text-gray-400 mb-8 font-sans">
+                                (porque você aprende e executa)
+                            </p>
 
                             <div className="relative text-gray-200 text-sm md:text-base leading-relaxed space-y-5 font-sans">
                                 <p>
-                                    O <span className="text-[#dc2626] font-bold">Anti Fluxo</span> é, definitivamente a melhor forma de parear seu conhecimento e networking com gente avançada no mercado. Não apenas pela finita gama de conhecimento disponível na nossa área de membros, com módulos de criativos, mineração básica e avançada, modelagem, entendendo o tráfego direto, funil de x1 no whatsapp de forma automática, modelagem de oferta com IA, tráfego pago para Face Ads, estruturas de campanha, escala e backend.
+                                    O <span className="text-[#dc2626] font-bold">Anti Fluxo</span> foi feito pra uma coisa: te tirar do {'"'}tô estudando{'"'} e te colocar no {'"'}tô rodando{'"'}.
                                 </p>
 
                                 <p>
-                                    Mas também porque contamos com <span className="text-white font-semibold">grandes players do mercado</span> interagindo ativamente com o nosso ecossistema. Alguns mais conhecidos, e outros que <span className="text-white font-semibold">faturam milhões por mês</span> atrás da tela do computador, sem que ninguém faça ideia de quem são.
+                                    Aqui dentro você não entra só pra {'"'}network{'"'}. Você entra com um <span className="text-white font-semibold">treinamento completo</span> na área de membros, com módulos como:
                                 </p>
 
+                                <ul className="space-y-2 pl-1">
+                                    {[
+                                        "Criativos (direct response)",
+                                        "Mineração (básica e avançada)",
+                                        "Modelagem e clonagem inteligente",
+                                        "Fundamentos de tráfego direto",
+                                        "Funil de X1 no WhatsApp (automático)",
+                                        "Modelagem de oferta com IA",
+                                        "Meta Ads (estrutura, campanha, escala e backend)",
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2">
+                                            <span className="text-[#dc2626] mt-0.5">▸</span>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+
                                 <p>
-                                    Não somos um grupinho parado no WhatsApp. Dentro da comunidade, todos os dias, há pessoas trocando informações valiosas sobre o que está funcionando <span className="text-[#dc2626] font-bold">HOJE</span> no mercado. Se você não souber a resposta para o que precisa ou quiser um direcionamento sobre o que está pensando em fazer, certamente algum membro da comunidade já passou por isso e pode te ajudar.
+                                    E além disso, tem o que faz diferença de verdade: <span className="text-white font-semibold">gente rodando agora</span>, trocando o que está funcionando <span className="text-[#dc2626] font-bold">HOJE</span> — com feedback, direcionamento e solução de problema real.
+                                </p>
+
+                                <p className="text-white font-semibold">
+                                    Não é um grupinho parado no WhatsApp.
+                                </p>
+                                <p>
+                                    É treinamento + ecossistema ativo pra você evoluir mais rápido com menos tentativa e erro.
                                 </p>
 
                                 <div className="mt-8 pt-6 border-t border-white/10">
                                     <p className="text-gray-300 italic text-right font-serif text-base">
-                                        - Gabriel Maia
+                                        — Gabriel Maia
                                     </p>
                                 </div>
                             </div>

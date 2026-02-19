@@ -174,7 +174,7 @@ export default function InfiniteHero() {
     return (
         <div
             ref={rootRef}
-            className="relative h-svh w-full overflow-hidden bg-[#050000] text-white flex flex-col justify-end pb-20 md:justify-center md:pb-0"
+            className="relative min-h-[85svh] md:h-svh w-full overflow-hidden bg-[#050000] text-white flex flex-col justify-end pb-16 md:justify-center md:pb-0"
         >
             <div className="absolute inset-0 z-0" ref={bgRef}>
                 <ShaderBackground className="h-full w-full opacity-60" />
@@ -186,24 +186,22 @@ export default function InfiniteHero() {
                 <div className="text-center max-w-4xl mx-auto" ref={contentRef}>
                     <h1
                         ref={titleRef}
-                        className="mx-auto mb-8 text-4xl sm:text-6xl md:text-7xl font-black leading-[0.9] tracking-tighter text-white font-display uppercase drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                        className="mx-auto mb-8 text-3xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tighter text-white font-display uppercase drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                     >
-                        <span className="whitespace-nowrap block">COMUNIDADE PRIVADA</span>
-                        <span className="whitespace-nowrap block">PARA PLAYERS DE</span>
-                        <span className="whitespace-nowrap block text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]">DIRECT RESPONSE</span>
+                        <span className="block">TREINAMENTO DE</span>
+                        <span className="block">LOW TICKET</span>
+                        <span className="block">PRA RODAR E ESCALAR:</span>
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]">TRÁFEGO DIRETO + X1 NO WHATSAPP</span>
                     </h1>
 
                     <p
                         ref={subtitleRef}
                         className="mx-auto mt-6 mb-12 max-w-lg text-base md:text-lg leading-relaxed text-white/90 px-4 drop-shadow-lg font-medium font-sans"
                     >
-                        A <strong className="text-white font-bold">ANTI FLUXO</strong> reúne players que fazem{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">múltiplos 6 dígitos por dia</span> e{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">players iniciantes</span>. Um único objetivo em comum: te{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">ajudar a começar</span> e{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">faturar com consistência</span> com{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">tráfego direto</span> e{" "}
-                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">X1 no WhatsApp</span>.
+                        Acesso imediato à área de membros com{" "}
+                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">aulas gravadas</span> (Tráfego Direto + X1 no WhatsApp automático) e uma{" "}
+                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">comunidade ativa</span> pra você executar com direção e ganhar{" "}
+                        <span className="text-white underline underline-offset-4 decoration-[#ef4444]">consistência</span>.
                     </p>
 
                     <div
