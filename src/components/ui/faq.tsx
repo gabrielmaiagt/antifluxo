@@ -10,7 +10,7 @@ export default function FAQ() {
         {
             icon: <Lock className="w-6 h-6 text-[#dc2626]" />,
             question: "Este valor é uma mensalidade?",
-            answer: "Não, este é um pagamento único. Você terá acesso por 6 meses a todo o conteúdo e futuras atualizações sem nenhum custo adicional.",
+            answer: "Não, este é um pagamento único. Você terá acesso vitalício a todo o conteúdo e futuras atualizações sem nenhum custo adicional.",
         },
         {
             icon: <HelpCircle className="w-6 h-6 text-[#dc2626]" />,

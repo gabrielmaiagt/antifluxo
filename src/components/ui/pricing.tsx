@@ -72,16 +72,16 @@ export default function Pricing() {
 
                             {/* Discount Badge */}
                             <div className="inline-block bg-[#dc2626] text-white text-xs font-bold uppercase px-3 py-1 rounded-full mb-3">
-                                85% OFF
+                                50% OFF
                             </div>
 
                             {/* Current Price */}
                             <div className="flex flex-col items-center justify-center font-display leading-none">
                                 <div className="flex items-end gap-1 mb-2">
                                     <span className="text-2xl font-bold text-white mb-1">R$</span>
-                                    <span className="text-6xl font-black text-white tracking-tighter">67,00</span>
+                                    <span className="text-6xl font-black text-white tracking-tighter">97,00</span>
                                 </div>
-                                <span className="text-sm font-bold text-gray-400 uppercase tracking-wide">6 meses de acesso</span>
+                                <span className="text-sm font-bold text-gray-400 uppercase tracking-wide">Acesso Vitalício</span>
                             </div>
                         </div>
 
@@ -91,7 +91,7 @@ export default function Pricing() {
                             className="w-full"
                             onClick={() => {
                                 const sessionId = getSessionId();
-                                trackEvent('checkout_clicked', { sessionId, amount: 67.00 });
+                                trackEvent('checkout_clicked', { sessionId, amount: 97.00 });
                             }}
                         >
                             <ShimmerButton

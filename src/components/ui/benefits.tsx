@@ -13,8 +13,8 @@ export default function Benefits() {
                     </h2>
                 </div>
 
-                {/* Images Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {/* Images Grid - Stacked vertically with compact size */}
+                <div className="grid grid-cols-1 gap-8 max-w-xl mx-auto">
 
                     {/* Card 1: Calls */}
                     <div className="rounded-2xl overflow-hidden border border-white/10 hover:border-[#dc2626]/50 transition-all duration-300 group shadow-lg">
@@ -26,7 +26,7 @@ export default function Benefits() {
                             className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                             loading="lazy"
                             quality={85}
-                            sizes="(max-width: 768px) 100vw, 33vw"
+                            sizes="(max-width: 576px) 100vw, 576px"
                         />
                     </div>
 
@@ -40,7 +40,7 @@ export default function Benefits() {
                             className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                             loading="lazy"
                             quality={85}
-                            sizes="(max-width: 768px) 100vw, 33vw"
+                            sizes="(max-width: 576px) 100vw, 576px"
                         />
                     </div>
 

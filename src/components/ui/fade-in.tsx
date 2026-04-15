@@ -54,8 +54,9 @@ export default function FadeIn({
             ref={ref}
             style={{
                 opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translate(0, 0)" : getInitialTransform(),
-                transition: `opacity ${duration}s ease-out ${delay}s, transform ${duration}s ease-out ${delay}s`,
+                transform: isVisible ? "translate3d(0, 0, 0)" : `scale(0.98) ${getInitialTransform()}`,
+                transition: `opacity ${duration}s cubic-bezier(0.22, 1, 0.36, 1) ${delay}s, transform ${duration}s cubic-bezier(0.22, 1, 0.36, 1) ${delay}s`,
+                willChange: isVisible ? "auto" : "opacity, transform",
             }}
         >
             {children}

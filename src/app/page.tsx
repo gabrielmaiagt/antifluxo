@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic';
 import UrgencyBanner from "@/components/ui/urgency-banner";
 import InfiniteHero from "@/components/ui/infinite-hero";
-import LevelerCard from "@/components/ui/leveler-card";
 import FadeIn from "@/components/ui/fade-in";
 
 // Lazy load below-the-fold components
@@ -21,10 +20,6 @@ export default function Home() {
     <main className="min-h-screen bg-black">
       <UrgencyBanner />
       <InfiniteHero />
-
-      <FadeIn direction="up" delay={0.1}>
-        <LevelerCard />
-      </FadeIn>
 
       <FadeIn direction="up" delay={0}>
         <Benefits />

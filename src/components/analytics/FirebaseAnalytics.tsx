@@ -22,9 +22,11 @@ export default function FirebaseAnalytics() {
             });
         }
 
-        // Track funnel entry and initialize conversion
-        trackEvent('funnel_entry', { page: '/' });
-        initConversion(sessionId);
+        // Track funnel entry and initialize conversion (deferred for performance)
+        const timer = setTimeout(() => {
+            trackEvent('funnel_entry', { page: '/' });
+            initConversion(sessionId);
+        }, 2000);
 
         // Scroll depth tracking
         const scrollDepths = [25, 50, 75, 100];

@@ -6,7 +6,6 @@ import { gsap } from "gsap";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import ShimmerButton from "@/components/ui/shimmer-button";
-import { MessageCircle } from "lucide-react";
 
 interface ShaderPlaneProps {
     vertexShader: string;
@@ -84,7 +83,8 @@ function ShaderBackground({
     float fbm(vec2 st) {
         float value = 0.0;
         float amplitude = 0.5;
-        for (int i = 0; i < 5; i++) {
+        // Optimized: Reduced iterations from 5 to 3 to improve scrolling performance
+        for (int i = 0; i < 3; i++) {
             value += amplitude * noise(st);
             st *= 2.0;
             amplitude *= 0.5;
@@ -182,16 +182,15 @@ export default function InfiniteHero() {
 
             <div className="pointer-events-none absolute inset-0 z-0 [background:radial-gradient(circle_at_50%_50%,_transparent_0%,_#050000_80%)] opacity-90" />
 
-            <div className="relative z-10 flex w-full items-center justify-center px-6">
+            <div className="relative z-10 flex w-full items-center justify-center px-6" style={{ transform: 'translate3d(0,0,0)' }}>
                 <div className="text-center max-w-4xl mx-auto" ref={contentRef}>
                     <h1
                         ref={titleRef}
                         className="mx-auto mb-8 text-3xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tighter text-white font-display uppercase drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                     >
-                        <span className="block">TREINAMENTO DE</span>
-                        <span className="block">LOW TICKET</span>
-                        <span className="block">PRA RODAR E ESCALAR:</span>
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]">TRÁFEGO DIRETO + X1 NO WHATSAPP</span>
+                        <span className="block">COMUNIDADE DE LOWTICKET</span>
+                        <span className="block">PARA ESCALAR</span>
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-[0_0_25px_rgba(255,255,255,0.5)]">TRAFEGO DIRETO E X1 NO WHATSAPP</span>
                     </h1>
 
                     <p
@@ -217,17 +216,6 @@ export default function InfiniteHero() {
                             >
                                 QUERO ENTRAR
                             </ShimmerButton>
-                        </a>
-
-                        <a
-                            href="https://wa.me/5571991511702"
-                            target="_blank"
-                            className="w-auto group flex items-center justify-center gap-3 px-6 py-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-white transition-all duration-300 hover:bg-white/10 hover:border-white/30 hover:scale-[1.02]"
-                        >
-                            <MessageCircle className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" />
-                            <span className="font-display tracking-wider uppercase text-xs font-bold opacity-90 group-hover:opacity-100">
-                                Tirar Dúvidas
-                            </span>
                         </a>
                     </div>
                 </div>

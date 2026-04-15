@@ -52,12 +52,12 @@ export default function Testimonials() {
                                 ) : (
                                     <video
                                         src={`/testimonials/${file}`}
-                                        controls
-                                        preload="metadata"
-                                        playsInline
+                                        autoPlay
+                                        loop
                                         muted
+                                        playsInline
+                                        preload="auto"
                                         className="w-full h-full object-cover"
-                                        poster={`/testimonials/${file}#t=0.1`}
                                     />
                                 )}
                             </div>
