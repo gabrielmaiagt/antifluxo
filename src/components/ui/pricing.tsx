@@ -67,7 +67,7 @@ export default function Pricing() {
                         <div className="mt-auto text-center mb-8">
                             {/* Original Price - Crossed Out */}
                             <div className="mb-2">
-                                <span className="text-lg font-bold text-gray-500 line-through">De R$ 197,00</span>
+                                <span className="text-lg font-bold text-gray-500 line-through">De R$ 297,00</span>
                             </div>
 
                             {/* Discount Badge */}
@@ -79,7 +79,7 @@ export default function Pricing() {
                             <div className="flex flex-col items-center justify-center font-display leading-none">
                                 <div className="flex items-end gap-1 mb-2">
                                     <span className="text-2xl font-bold text-white mb-1">R$</span>
-                                    <span className="text-6xl font-black text-white tracking-tighter">97,00</span>
+                                    <span className="text-6xl font-black text-white tracking-tighter">147,00</span>
                                 </div>
                                 <span className="text-sm font-bold text-gray-400 uppercase tracking-wide">Acesso Vitalício</span>
                             </div>
@@ -91,7 +91,7 @@ export default function Pricing() {
                             className="w-full"
                             onClick={() => {
                                 const sessionId = getSessionId();
-                                trackEvent('checkout_clicked', { sessionId, amount: 97.00 });
+                                trackEvent('checkout_clicked', { sessionId, amount: 147.00 });
                             }}
                         >
                             <ShimmerButton
